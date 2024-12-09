@@ -52,6 +52,7 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -60,7 +61,9 @@
     </dependencies>
 
     <modules>
+        <module>application</module>
         <module>domain</module>
+        <module>boot</module>
     </modules>
 
     <build>
