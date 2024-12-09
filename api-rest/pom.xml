@@ -9,10 +9,10 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>application</artifactId>
+    <artifactId>api-rest</artifactId>
     <version>0.0.1</version>
     <packaging>jar</packaging>
-    <name>application</name>
+    <name>api-rest</name>
 
     <url/>
     <licenses>
@@ -34,8 +34,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.redsf.product</groupId>
-            <artifactId>domain</artifactId>
+            <artifactId>application</artifactId>
             <version>0.0.1</version>
         </dependency>
     </dependencies>
