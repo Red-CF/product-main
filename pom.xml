@@ -61,6 +61,7 @@
     </dependencies>
 
     <modules>
+        <module>mongo-repository</module>
         <module>api-rest</module>
         <module>application</module>
         <module>domain</module>

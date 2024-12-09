@@ -66,6 +66,11 @@
             <artifactId>api-rest</artifactId>
             <version>0.0.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.redsf.product</groupId>
+            <artifactId>mongo-repository</artifactId>
+            <version>0.0.1</version>
+        </dependency>
     </dependencies>
 
     <profiles>
