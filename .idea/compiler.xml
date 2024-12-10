@@ -2,11 +2,11 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="api-rest" />
       </profile>
       <profile name="Annotation profile for product-main" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -18,34 +18,28 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
         </processorPath>
-        <module name="application" />
+        <module name="use-cases" />
+        <module name="database-repository" />
         <module name="boot" />
-      </profile>
-      <profile name="Annotation profile for domain" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
-        </processorPath>
+        <module name="api-rest" />
         <module name="domain" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="application" target="17" />
+      <module name="product-main" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="api-rest" options="-parameters" />
+      <module name="api-rest" options="-parameters -Amapstruct.defaultComponentModel=spring" />
       <module name="application" options="-parameters -Amapstruct.defaultComponentModel=spring" />
       <module name="boot" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="database-repository" options="-parameters -Amapstruct.defaultComponentModel=spring" />
       <module name="domain" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="org.redsf.product.product.main" options="-parameters -Amapstruct.defaultComponentModel=spring" />
       <module name="product-main" options="-parameters -Amapstruct.defaultComponentModel=spring" />
+      <module name="use-cases" options="-parameters -Amapstruct.defaultComponentModel=spring" />
     </option>
   </component>
 </project>
