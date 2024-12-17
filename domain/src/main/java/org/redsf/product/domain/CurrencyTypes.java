@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter
 public enum CurrencyTypes {
     EUR("EUR"),
-    DOLLAR("DOLLAR"),
+    USD("USD"),
     YEN("YEN");
 
     private final String code;

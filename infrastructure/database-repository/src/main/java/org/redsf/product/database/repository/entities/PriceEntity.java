@@ -1,12 +1,14 @@
-package org.redsf.product.mongorepository.entities;
+package org.redsf.product.database.repository.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
 @Table(name = "PRICE")
 public class PriceEntity {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "ID")
     private int id;
     @Column(name = "BRAND_ID")
