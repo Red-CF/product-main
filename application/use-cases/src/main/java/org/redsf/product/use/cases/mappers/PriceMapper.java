@@ -1,15 +1,15 @@
-package org.redsf.product.application.mappers;
+package org.redsf.product.use.cases.mappers;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.redsf.product.application.models.PriceMO;
+import org.redsf.product.use.cases.models.PriceMO;
 import org.redsf.product.domain.PriceDTO;
 
-@Mapper(componentModel = "spring")
+@Mapper()
 public interface PriceMapper {
 
     @Mapping(source = "curr", target = "curr", defaultValue = "EUR")
     PriceDTO toDto(PriceMO priceMO);
     @Mapping(source = "curr", target = "curr", defaultValue = "EUR")
-    PriceMO toMo(PriceDTO priceDTO);
+    PriceMO toModel(PriceDTO priceDTO);
 }
